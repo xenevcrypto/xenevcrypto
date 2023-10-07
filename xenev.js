@@ -208,21 +208,14 @@ async function ObtenerCuenta(){
      const aux1=aux.toFixed(3);
      
 
-      var balanceVLX = document.getElementById("balancevlx");
-      balanceVLX.textContent=aux1;
-      var balanceXEN = document.getElementById("balancexen");
-      
-      const contract = new web3.eth.Contract(JSON.parse(abiXenev), contrato);   
-      const balancevlXen = await contract.methods.balanceOf(address).call();
-      var  balancevlxen = document.getElementById("balancevlxen"); 
-      const resultado = Number(balancevlXen) / 10**18;
-      balancevlxen.textContent=resultado;
-
-      const contractxen = new web3.eth.Contract(JSON.parse(abiXen), contratoxen);   
-      const balanceXen = await contractxen.methods.balanceOf(address).call();
-      var  balancexen = document.getElementById("balancevlxen"); 
-      const result = Number(balancexen) / 10**18;
-      balanceXEN.textContent=resultado;
+     var balanceVLX = document.getElementById("balancevlx");
+     balanceVLX.textContent=aux1;
+     
+     const contract = new web3.eth.Contract(JSON.parse(abiXenev), contrato);   
+     const balancevlXen = await contract.methods.balanceOf(address).call();
+     var  balancevlxen = document.getElementById("balancevlxen"); 
+     const resultado = Number(balancevlXen) / 10**18;
+     balancevlxen.textContent=resultado;
       
     
   
