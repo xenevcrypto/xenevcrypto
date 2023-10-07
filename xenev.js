@@ -134,6 +134,7 @@ async function ConectarMetamask()
       NftCatClass();      
       ActualizarDasboard();      
       GlobaRank();
+      ListarNFT();
       
 
     } else {
