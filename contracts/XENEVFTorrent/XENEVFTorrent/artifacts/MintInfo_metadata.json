@@ -1,0 +1,325 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					}
+				],
+				"name": "decodeMintInfo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "term",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maturityTs",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rank",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "eaa",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "class",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "apex",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "limited",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "redeemed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "term",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maturityTs",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rank",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "eaa",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "class_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "redeemed",
+						"type": "bool"
+					}
+				],
+				"name": "encodeMintInfo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					}
+				],
+				"name": "getAMP",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					}
+				],
+				"name": "getClass",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "class_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "apex",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "limited",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					}
+				],
+				"name": "getEAA",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "eaa",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					}
+				],
+				"name": "getMaturityTs",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "maturityTs",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					}
+				],
+				"name": "getRank",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "rank",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					}
+				],
+				"name": "getRedeemed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "redeemed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					}
+				],
+				"name": "getTerm",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "term",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"decodeMintInfo(uint256)": {
+					"details": "decodes MintInfo record and extracts all of its props"
+				},
+				"encodeMintInfo(uint256,uint256,uint256,uint256,uint256,uint256,bool)": {
+					"details": "encodes MintInfo record from its props"
+				},
+				"getAMP(uint256)": {
+					"details": "extracts `AMP` prop from encoded MintInfo"
+				},
+				"getClass(uint256)": {
+					"details": "extracts `redeemed` prop from encoded MintInfo"
+				},
+				"getEAA(uint256)": {
+					"details": "extracts `EAA` prop from encoded MintInfo"
+				},
+				"getMaturityTs(uint256)": {
+					"details": "extracts `maturityTs` prop from encoded MintInfo"
+				},
+				"getRank(uint256)": {
+					"details": "extracts `rank` prop from encoded MintInfo"
+				},
+				"getRedeemed(uint256)": {
+					"details": "extracts `redeemed` prop from encoded MintInfo"
+				},
+				"getTerm(uint256)": {
+					"details": "extracts `term` prop from encoded MintInfo"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/MintInfo.sol": "MintInfo"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/MintInfo.sol": {
+			"keccak256": "0x7f44dcb53047c2b42ad12fabefcafd9ea180ea757f83c0cd813762a7523957c3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dd58163466e13359b47816262335d3e472c4b27faae6d4b34e720ed332fd3ae8",
+				"dweb:/ipfs/QmUkvoH2iGKDTDhzxJ2Gz5daNQTqUsiZJef4nGb4Sm2aMV"
+			]
+		}
+	},
+	"version": 1
+}

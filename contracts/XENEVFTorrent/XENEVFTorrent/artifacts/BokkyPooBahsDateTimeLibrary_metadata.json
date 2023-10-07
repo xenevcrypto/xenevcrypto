@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/BokkyPooBahsDateTimeLibrary.sol": "BokkyPooBahsDateTimeLibrary"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/BokkyPooBahsDateTimeLibrary.sol": {
+			"keccak256": "0x039dd3116adecea7b40ed903eb102baee2cf3823a5fbface04df305234a39289",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91d2a749d26cb6e8a5209bd85e34b53adf68b8bf9b0351135a9dcfb83d0629ae",
+				"dweb:/ipfs/QmUD4TV2vacTGnEPfRHgik9R7f7JU5gwQr5t2u78ZVbXcn"
+			]
+		}
+	},
+	"version": 1
+}

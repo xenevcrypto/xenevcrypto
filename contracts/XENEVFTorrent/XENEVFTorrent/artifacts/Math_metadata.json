@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"name": "logX64",
+				"outputs": [
+					{
+						"internalType": "int128",
+						"name": "",
+						"type": "int128"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "max",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "min",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/Math.sol": "Math"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/ABDKMath64x64.sol": {
+			"keccak256": "0xdc0cfe4f32e543221c8d8dd1b48117f2f63f7de9fb181bbf3b2dbf8abafb7c4d",
+			"license": "BSD-4-Clause",
+			"urls": [
+				"bzz-raw://1822b8f66279455d3361189f3984636ba8e00d9ddd62a7bf0487ef548bbebf39",
+				"dweb:/ipfs/QmQz6R8JpdKeWJtPbH3xsmnbD1CEBaitSHmzpKnW2fsLqj"
+			]
+		},
+		"XENFT/Math.sol": {
+			"keccak256": "0x26a897cfa85617cc5ee7f1275578d8f2baa2137d0119eee0a984b1188325eb80",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2fe91d7c4e400bf69299728ec2cbab44479588fba5911d6f55c8563a4017fbf3",
+				"dweb:/ipfs/QmNSFsXYse5wdsYESyzbk85hsDbhiqxLNqyRon5RL4vEmD"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/IBurnableToken.sol": "IBurnableToken"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/IBurnableToken.sol": {
+			"keccak256": "0xddf566de91315b397b5f7e1fe409c9cd9c0e5efa61cd977517743a9390f43232",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a6b6b465a32ab60604a83b582d788b5f05f818af0f23f82a15aa6ea36727511a",
+				"dweb:/ipfs/QmXU9fTmv7i4ptQyTW9QfyuwqmyxoCLAJyhVudSET7imZi"
+			]
+		}
+	},
+	"version": 1
+}

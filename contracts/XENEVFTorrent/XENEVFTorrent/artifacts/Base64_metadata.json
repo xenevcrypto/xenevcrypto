@@ -1,0 +1,51 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Provides a set of functions to operate with Base64 strings. _Available since v4.5._",
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"_TABLE": {
+					"details": "Base64 Encoding/Decoding Table"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/Base64.sol": "Base64"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/Base64.sol": {
+			"keccak256": "0x05156eae9e54b8acd0b8d9bfbf4be79303b7c960450d2cce5390236a13864b2f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d7793021f72350a340fa48ddc727be3c6ca4774894f0d4a550902217d20c4e08",
+				"dweb:/ipfs/QmVJFiSrNjHLdKtff9esNzfHoDGoyG1GAiTmgbJ8NENSvZ"
+			]
+		}
+	},
+	"version": 1
+}

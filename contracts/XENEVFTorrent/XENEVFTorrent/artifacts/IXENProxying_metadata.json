@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "callClaimMintReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "term",
+						"type": "uint256"
+					}
+				],
+				"name": "callClaimRank",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "powerDown",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/IXENProxying.sol": "IXENProxying"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/IXENProxying.sol": {
+			"keccak256": "0x82fcc7c3dcde2f31047c85d0ab10d3137f5ae58b2b8a1257742777864746fcb6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b847446ec84051a301dc5611087e45e71734c033825c101ed9ea7b00bb921a24",
+				"dweb:/ipfs/QmcKkNe8kFjvS4p3rKx2Wnvsc1ivEyFmCadw1Xf1AgPHs6"
+			]
+		}
+	},
+	"version": 1
+}

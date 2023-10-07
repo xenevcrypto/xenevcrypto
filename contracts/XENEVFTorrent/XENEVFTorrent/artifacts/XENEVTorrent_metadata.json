@@ -1,0 +1,1415 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "xenCrypto_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "burnRates_",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "tokenLimits_",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startBlockNumber_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "forwarder_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "royaltyReceiver_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					}
+				],
+				"name": "OperatorNotAllowed",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "approved",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "approved",
+						"type": "bool"
+					}
+				],
+				"name": "ApprovalForAll",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "EndTorrent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "xenContract",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "tokenContract",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "xenAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "Redeemed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "term",
+						"type": "uint256"
+					}
+				],
+				"name": "StartTorrent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "AUTHORS",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "BLACKOUT_TERM",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "COMMON_CATEGORY_COUNTER",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "LIMITED_CATEGORY_TIME_THRESHOLD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "OPERATOR_FILTER_REGISTRY",
+				"outputs": [
+					{
+						"internalType": "contract IOperatorFilterRegistry",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "POWER_GROUP_SIZE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ROYALTY_BP",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "SPECIAL_CATEGORIES_VMU_THRESHOLD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "trustedForwarder",
+						"type": "address"
+					}
+				],
+				"name": "addForwarder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "bulkClaimMintReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "term",
+						"type": "uint256"
+					}
+				],
+				"name": "bulkClaimRank",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "term",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "burning",
+						"type": "uint256"
+					}
+				],
+				"name": "bulkClaimRankLimited",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "callClaimMintReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "term",
+						"type": "uint256"
+					}
+				],
+				"name": "callClaimRank",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "genesisTs",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getApproved",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "isApex",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "apex",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					}
+				],
+				"name": "isApprovedForAll",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "forwarder",
+						"type": "address"
+					}
+				],
+				"name": "isTrustedForwarder",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "mintInfo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "burned",
+						"type": "uint256"
+					}
+				],
+				"name": "onTokenBurned",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ownedTokens",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "powerDown",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "salePrice",
+						"type": "uint256"
+					}
+				],
+				"name": "royaltyInfo",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "royaltyAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "approved",
+						"type": "bool"
+					}
+				],
+				"name": "setApprovalForAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "specialClassesBurnRates",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "specialClassesCounters",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "specialClassesTokenLimits",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startBlockNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenIdCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "vmuCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "xenBurned",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "xenCrypto",
+				"outputs": [
+					{
+						"internalType": "contract XENEVCrypto",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when `owner` enables `approved` to manage the `tokenId` token."
+				},
+				"ApprovalForAll(address,address,bool)": {
+					"details": "Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets."
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `tokenId` token is transferred from `from` to `to`."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"addForwarder(address)": {
+					"details": "Implements setting a `Trusted Forwarder` for meta-txs. Settable only once"
+				},
+				"approve(address,uint256)": {
+					"details": "implements `approve` with additional approved Operator checking"
+				},
+				"balanceOf(address)": {
+					"details": "See {IERC721-balanceOf}."
+				},
+				"bulkClaimMintReward(uint256,address)": {
+					"details": "public torrent interface. initiates Mint Reward claim and collection and terminates Torrent Operation"
+				},
+				"bulkClaimRank(uint256,uint256)": {
+					"details": "public XEN Torrent interface initiates Bulk Mint (Torrent) Operation (Common Category)"
+				},
+				"bulkClaimRankLimited(uint256,uint256,uint256)": {
+					"details": "public torrent interface. initiates Bulk Mint (Torrent) Operation (Special Category)"
+				},
+				"burn(address,uint256)": {
+					"details": "burns XENTorrent XENFT which can be used by connected contracts services"
+				},
+				"callClaimMintReward(address)": {
+					"details": "function callable only in proxy contracts from the original one => XENCrypto.claimMintRewardAndShare()"
+				},
+				"callClaimRank(uint256)": {
+					"details": "function callable only in proxy contracts from the original one => XENCrypto.claimRank(term)"
+				},
+				"constructor": {
+					"details": "Constructor. Creates XEN Torrent contract, setting immutable parameters"
+				},
+				"getApproved(uint256)": {
+					"details": "See {IERC721-getApproved}."
+				},
+				"isApex(uint256)": {
+					"details": "determines if tokenId corresponds to Limited Category"
+				},
+				"isApprovedForAll(address,address)": {
+					"details": "See {IERC721-isApprovedForAll}."
+				},
+				"name()": {
+					"details": "See {IERC721Metadata-name}."
+				},
+				"onTokenBurned(address,uint256)": {
+					"details": "implements IBurnRedeemable interface for burning XEN and completing Bulk Mint for limited series"
+				},
+				"ownedTokens()": {
+					"details": "public getter for tokens owned by address"
+				},
+				"owner()": {
+					"details": "public getter to check for deployer / owner (Opensea, etc.)"
+				},
+				"ownerOf(uint256)": {
+					"details": "See {IERC721-ownerOf}."
+				},
+				"powerDown()": {
+					"details": "function callable only in proxy contracts from the original one => destroys the proxy contract"
+				},
+				"royaltyInfo(uint256,uint256)": {
+					"details": "Implements getting Royalty Info by supported operators. ROYALTY_BP is expressed in basis points"
+				},
+				"safeTransferFrom(address,address,uint256)": {
+					"details": "implements `safeTransferFrom` with additional approved Operator checking"
+				},
+				"safeTransferFrom(address,address,uint256,bytes)": {
+					"details": "implements `safeTransferFrom` with additional approved Operator checking"
+				},
+				"setApprovalForAll(address,bool)": {
+					"details": "implements `setApprovalForAll` with additional approved Operator checking"
+				},
+				"supportsInterface(bytes4)": {
+					"details": "confirms support for IERC-165, IERC-721, IERC2981, IERC2771 and IBurnRedeemable interfaces"
+				},
+				"symbol()": {
+					"details": "See {IERC721Metadata-symbol}."
+				},
+				"tokenURI(uint256)": {
+					"details": "compliance with ERC-721 standard (NFT); returns NFT metadata, including SVG-encoded image"
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "implements `transferFrom` with additional approved Operator checking"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENEVFTorrent/XENEVFT.sol": "XENEVTorrent"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENEVFTorrent/ABDKMath64x64.sol": {
+			"keccak256": "0xdc0cfe4f32e543221c8d8dd1b48117f2f63f7de9fb181bbf3b2dbf8abafb7c4d",
+			"license": "BSD-4-Clause",
+			"urls": [
+				"bzz-raw://1822b8f66279455d3361189f3984636ba8e00d9ddd62a7bf0487ef548bbebf39",
+				"dweb:/ipfs/QmQz6R8JpdKeWJtPbH3xsmnbD1CEBaitSHmzpKnW2fsLqj"
+			]
+		},
+		"XENEVFTorrent/Address.sol": {
+			"keccak256": "0xc161ae95260730bc62b1ae13165fd49fffa36bf7ec65ebc8b334b4ea338bd2c0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fd9a44d1fb13f74d88afabd53c17d32364a35d11ba91f738573305b2dd0d855d",
+				"dweb:/ipfs/QmQGsz1Ha1pXFptsMGN372vU1iQ9BFeBNn3DieeHrhp6BR"
+			]
+		},
+		"XENEVFTorrent/Array.sol": {
+			"keccak256": "0xf6229ede0b5fc2e02ca1b51cc3d212e21dbd30c40c707d09495eed0ff110843d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9ad39c3f8ed825ac65d53a245447f8bfaca685d4649ba900968b0773f70c69c2",
+				"dweb:/ipfs/QmeDMouJvuuYbg2eVE2HtM91HkvVEhERwSRoawrN5pEeTD"
+			]
+		},
+		"XENEVFTorrent/Base64.sol": {
+			"keccak256": "0x05156eae9e54b8acd0b8d9bfbf4be79303b7c960450d2cce5390236a13864b2f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d7793021f72350a340fa48ddc727be3c6ca4774894f0d4a550902217d20c4e08",
+				"dweb:/ipfs/QmVJFiSrNjHLdKtff9esNzfHoDGoyG1GAiTmgbJ8NENSvZ"
+			]
+		},
+		"XENEVFTorrent/BokkyPooBahsDateTimeLibrary.sol": {
+			"keccak256": "0x039dd3116adecea7b40ed903eb102baee2cf3823a5fbface04df305234a39289",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91d2a749d26cb6e8a5209bd85e34b53adf68b8bf9b0351135a9dcfb83d0629ae",
+				"dweb:/ipfs/QmUD4TV2vacTGnEPfRHgik9R7f7JU5gwQr5t2u78ZVbXcn"
+			]
+		},
+		"XENEVFTorrent/Context.sol": {
+			"keccak256": "0x2c36c9489879b7c91cdd73bbe8b2584f401aa26f4f252c04f053e824d6ca75c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3ef20575fc12fd27f252acd28a8d0f65893832f29fd9c82f7ec165121af4572f",
+				"dweb:/ipfs/QmZMCoWWDTjhs1CNFMWv4JNWVyyeuzyqteCHhF4heCUYJJ"
+			]
+		},
+		"XENEVFTorrent/DateTime.sol": {
+			"keccak256": "0x7bdbdc98d5fc7c7eb8fda7a53b1e22b19feb5407717e60f52863993a2b0b2be8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ae1ecb52b6fbb4efde88b9626b36114a835cd5d065f2e35a24652242f4e4a5c0",
+				"dweb:/ipfs/QmUn9yeQBAdubd5YSYz8DFFnHDmjnGnz4MmeeJ6vKpxc65"
+			]
+		},
+		"XENEVFTorrent/DefaultOperatorFilterer.sol": {
+			"keccak256": "0xc9f79345985e8ab55a604caf7773a74f73c0b2c32c619e6bea4258b6ce0f642f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5d88423dee2bdee9ebb9b4a41462820cf523ae3a92b9d251b560bd8b61a58960",
+				"dweb:/ipfs/QmeQsEni4KKYe6f9GwP3Teuw2Dje37ed63GEzjvdgY9YPn"
+			]
+		},
+		"XENEVFTorrent/ERC165.sol": {
+			"keccak256": "0x847fd3fb0bb6946e86e0da7060f08df5961ec874b4f93de2438b835b92edfd08",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4b85ed4a7ffd8067845fc390c896e4f49f78d4de1be291b76eda465f941e4e0c",
+				"dweb:/ipfs/QmbvCXfbTtEq4C1hpVjHGWCUVC5KdZHTCADWDwLYrYJZ88"
+			]
+		},
+		"XENEVFTorrent/ERC20.sol": {
+			"keccak256": "0x212037eb26234268834d0e527a241ee0b923ac1ba3a8962bb2ec8207883725cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d9e7a9a9b2e5e01307c9300b075f746b4f1e49fe47f1edb57f3db3628fb857b6",
+				"dweb:/ipfs/QmdgZb1rY5Afyk4DwwP7K23JjsKdQ6LgrgERDAko6dRMht"
+			]
+		},
+		"XENEVFTorrent/ERC2771Context.sol": {
+			"keccak256": "0xe5f9d9ade49e70f97cf46851683e6eea9c63450b6a2c968e2d39a1c690ceb032",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7478bf00408a6d0583247674c88350bdb1eaf7b055381d6c7d1de0e73f7468e4",
+				"dweb:/ipfs/Qma7oHnFa8QDTAjXyJiGWVT6kfYcTcF4dB6fmHSRVveaAL"
+			]
+		},
+		"XENEVFTorrent/ERC721.sol": {
+			"keccak256": "0x60c2d884f6d5204e863ecce8634657ed788e58b9bd56015789a3647db7e77a4e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ffd3312aef01cf8aa95bed9eefaf03f0a0c9642a2a09e0ac615d307d435f860d",
+				"dweb:/ipfs/QmVSbXebP4qXyu6Z5jHhe3Xmy3SGJ3BY2Fg6PH8rmPxQ3n"
+			]
+		},
+		"XENEVFTorrent/FormattedStrings.sol": {
+			"keccak256": "0x41efe2cdcf91ab99c820c29a57ecf7ccbc07c5f346552da0fe9100aa823f72d0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://32583c9dc876c9d1e254da06b1c2766aa553eace202602b614b9385de1e69181",
+				"dweb:/ipfs/QmcHimUZzPWhkB4VW6pvBMgvpegyYL2UryXgPjqp2s8SzN"
+			]
+		},
+		"XENEVFTorrent/IBurnRedeemable.sol": {
+			"keccak256": "0x4143f46a52ed886ae21fd56f6c214d86492b566c923ba04362e61465affdf53e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a150e367c3a49d84addb4f57469c409609eed1091cdff7f83e7e14f0da47c76b",
+				"dweb:/ipfs/Qmbz3uYFjwsh6RUXikJwQq1kXLcAMQ9vKSxVPuWmYjGXv7"
+			]
+		},
+		"XENEVFTorrent/IBurnableToken.sol": {
+			"keccak256": "0xddf566de91315b397b5f7e1fe409c9cd9c0e5efa61cd977517743a9390f43232",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a6b6b465a32ab60604a83b582d788b5f05f818af0f23f82a15aa6ea36727511a",
+				"dweb:/ipfs/QmXU9fTmv7i4ptQyTW9QfyuwqmyxoCLAJyhVudSET7imZi"
+			]
+		},
+		"XENEVFTorrent/IERC165.sol": {
+			"keccak256": "0x3213cb47aba4f8ba951dc5671d44e3559fecec1e9c402e679fbb5ada255fdff1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc2296c533793e4c2a6eb4909bd2ca8e99044aff82e3fe2049092bd3f62034a3",
+				"dweb:/ipfs/QmVwAULUUqeXLdggzzW1C3hdNUZbqHoCskoGyfzZ5EKcwW"
+			]
+		},
+		"XENEVFTorrent/IERC20.sol": {
+			"keccak256": "0x1f32a75186bb2aaa1f9a4c13a4bf5a603b4af5dc2dfd9c8f71483b34f7f556c1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f9460ab52630c472d623084d34ab505eb4abfe9d0fdb44bfe46046e3fdb38c93",
+				"dweb:/ipfs/QmasRT1jYUAsRWDSvt4mfTfZH1jdP8uvUUzvsRWdRDN3uS"
+			]
+		},
+		"XENEVFTorrent/IERC20Metadata.sol": {
+			"keccak256": "0x1ffe2047e11fcdd75b2aca845ef3428d93765011f9bdb0ca7bf5d9f95f62656a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b608f183a24077b867dcf21b1e5956b431291324b6025cbb864eb295e005307",
+				"dweb:/ipfs/QmPsgCmqe4HYkFpvYJGWWbkLoQEdhWDzmhG6Lv54FXua8W"
+			]
+		},
+		"XENEVFTorrent/IERC2771.sol": {
+			"keccak256": "0x0172541223c96238dd1afd2a7c6433dc4332381dc522c496fb0584d848f3c149",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b5ade822ad5bdeb536e3a0361ac241229f56780fb4b464f18f728e33c67348e9",
+				"dweb:/ipfs/QmUH7xLEZDJofXtAK1Z2wif3w6EiNCvYJpbaZ2XcYPj54y"
+			]
+		},
+		"XENEVFTorrent/IERC2981.sol": {
+			"keccak256": "0x32b8046eb58fb5d30ac8f356a5aa94adda34c3a4a549d49dbdd410b6a58e6d8c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a3ddf7aba201d12082688aab0e2869ae5c827d3873bd3210deda1984acdd7c5a",
+				"dweb:/ipfs/QmW4dwqPp6aA1daTLVsjJMfGCH7JnprT5Qg2QMrQxasZJS"
+			]
+		},
+		"XENEVFTorrent/IERC721.sol": {
+			"keccak256": "0x33f844e68a6c8fcf79a9a16bacac26efa069ec97d2b893358ee105b044d6c60d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9136540cc15559d279a02a83b05e479fd1f35dafceb80b09742fe4155a635f4f",
+				"dweb:/ipfs/QmWiaVzC9Y6iSCqnuAdxrYt6jngxBodr4rXyMrhExypuup"
+			]
+		},
+		"XENEVFTorrent/IERC721Metadata.sol": {
+			"keccak256": "0xbd2f66fddef3b5180deb1c8bef90ae0a356f85c25dc7ef52fc663dea2b449ff4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f0ba681d1360880d7fb5457223586f550029f430bea9a7b34400eb63c4c3ecae",
+				"dweb:/ipfs/QmTZGYJQJDE8nSuHFHshuc1fYSwdWJuEXVBZ9vUQKF6ao8"
+			]
+		},
+		"XENEVFTorrent/IERC721Receiver.sol": {
+			"keccak256": "0xf519c884616195e754dcc17993b01095b97ee7c63f695a8b99d351a143195201",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://31d5c889c1bc19d04642d2d6cd3b58bc557f594b9fa67ec05d896366da5f51a4",
+				"dweb:/ipfs/QmVVn4QxiSBBw1hgM7wuA5np2kGiVnn3P59zowzEuhqbyR"
+			]
+		},
+		"XENEVFTorrent/IOperatorFilterRegistry.sol": {
+			"keccak256": "0xa5f3ce1c6f32280086d1efd72ac6298b99e58d73bd87bc9ef8ccbf94cc25dcac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://25886ca78e58d8703b821efe0348a7532a47d723794a6a31a5eb01b0d8f4be50",
+				"dweb:/ipfs/QmS4EUkBGNMDnWS7LbAAySaEh54w5ruFSdPJNdTuuBTAU4"
+			]
+		},
+		"XENEVFTorrent/IRankedMintingToken.sol": {
+			"keccak256": "0xb60731702a1c5ceda66c45e00e0eb74d7375530d4ab141094df787ffd1512e0b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://53704cc60e7d58e61a21ad181579d3d5e4c820581e65087a074578795dc0ff07",
+				"dweb:/ipfs/QmaTrajMfhf7o1bGC3uyrbfLdqVSp3ELa11zoLTELtLJg6"
+			]
+		},
+		"XENEVFTorrent/IStakingToken.sol": {
+			"keccak256": "0xe7d0ed35c7e4af879c6e80740e05037a01f7966ab330337f45124c8ac94558a0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4e5716a3df4c0ba248f3e5176b31ae66ad3f4b75d9d489dc7cd0c2a12dc790ba",
+				"dweb:/ipfs/QmYryXGZEqA7oDmSb2KbMKHBfcyoSufLVzt2tLJ5tAsK3X"
+			]
+		},
+		"XENEVFTorrent/IXENProxying.sol": {
+			"keccak256": "0x82fcc7c3dcde2f31047c85d0ab10d3137f5ae58b2b8a1257742777864746fcb6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b847446ec84051a301dc5611087e45e71734c033825c101ed9ea7b00bb921a24",
+				"dweb:/ipfs/QmcKkNe8kFjvS4p3rKx2Wnvsc1ivEyFmCadw1Xf1AgPHs6"
+			]
+		},
+		"XENEVFTorrent/IXENTorrent.sol": {
+			"keccak256": "0xfdd856e8bd4f17c996489099f922d1fc9230aa99c50b0c710aaeebb671deb391",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://751841cec8dd9782d03592935242246135a8616d248f649db539ee3c671ba97d",
+				"dweb:/ipfs/QmR9q8yfri35bVbEhwRwfp5JaHNmEyeMSbHYTd4jBVTdqg"
+			]
+		},
+		"XENEVFTorrent/Math.sol": {
+			"keccak256": "0x26a897cfa85617cc5ee7f1275578d8f2baa2137d0119eee0a984b1188325eb80",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2fe91d7c4e400bf69299728ec2cbab44479588fba5911d6f55c8563a4017fbf3",
+				"dweb:/ipfs/QmNSFsXYse5wdsYESyzbk85hsDbhiqxLNqyRon5RL4vEmD"
+			]
+		},
+		"XENEVFTorrent/Metadata.sol": {
+			"keccak256": "0x90f9e4da3e5901fa6fc4a4f7203056aff8a8eccfd5ae6fdd4ca7bac78d3fc13b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce30c09d1d301df113b97537222b96c3995fb4b68bc38f1cf68996fd541c3fa5",
+				"dweb:/ipfs/QmPtajzQ6NDPCzKt6jmWuYc5GLJshU6S73TkYu1GuasZwy"
+			]
+		},
+		"XENEVFTorrent/MintInfo.sol": {
+			"keccak256": "0x7f44dcb53047c2b42ad12fabefcafd9ea180ea757f83c0cd813762a7523957c3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dd58163466e13359b47816262335d3e472c4b27faae6d4b34e720ed332fd3ae8",
+				"dweb:/ipfs/QmUkvoH2iGKDTDhzxJ2Gz5daNQTqUsiZJef4nGb4Sm2aMV"
+			]
+		},
+		"XENEVFTorrent/OperatorFilterer.sol": {
+			"keccak256": "0x7e49d76ac563b1f85a7cf28b2fb6efa0973615174dda70afb551fa9b2e28b9fe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://62315522778a1e992895c05c4898e1817730aaf99b10719f0c003c3a9eec0631",
+				"dweb:/ipfs/QmZnkctSzfcEco49XRekwyRsU7KvTrNU18DVk4t4VuBigz"
+			]
+		},
+		"XENEVFTorrent/SVG.sol": {
+			"keccak256": "0x59ef2a214ce68423d04dbe42b79a10e121b17f0294f81057ed382abd23ebaa85",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5446891706924e7474afe835f540939b496e3ab3d839b348d763ba37a8f7fe62",
+				"dweb:/ipfs/QmX4FZQB2QbcJYped2MGsFs841U9C933on2Pej7jTNe2Xf"
+			]
+		},
+		"XENEVFTorrent/StringData.sol": {
+			"keccak256": "0x81c722b8bd1ba4728b10ab3fd70bc3c4688f94f879c55057b658d8c18eaa8816",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://80284639e8a0e685a3b3925d38cf90516d86c3175a902e1465d2693e99feddcc",
+				"dweb:/ipfs/QmXCD5ARxLF95JqjSa1b9wAYRKWwWh9UiyJRTtHxKAwWg5"
+			]
+		},
+		"XENEVFTorrent/Strings.sol": {
+			"keccak256": "0xa27e8f761504e2630fa443384867dc8b933348e25467250129326ccf598e49d6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://95d1d0bd53f2d449601d7c461d278bce0b7d75b421ee5e5ae3910b5cb985381a",
+				"dweb:/ipfs/QmaaZoHwqGy3vFgaVbxpoRagp7Htv2MUknuUEVP1sCLXh6"
+			]
+		},
+		"XENEVFTorrent/XENCrypto.sol": {
+			"keccak256": "0x45a12cb386427f0393041e65ed33b7e2330307a6b2275190e9c65962693e4152",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ea618bfaa746514febbb0b7cd306ca748c181adc1a940e73181b45e6e9516791",
+				"dweb:/ipfs/QmT2cyk8GXRnVaoHbbKmfRwGqqozusZwCaLSdr8SsEW4ZB"
+			]
+		},
+		"XENEVFTorrent/XENEV.sol": {
+			"keccak256": "0x09d911cdfdd306f7e0953fb9d68b4932ee13636f1cbcc891f94614eab6ee1f2d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9422dd118e2baeb8ccc249a38a0f8915b17ca5d97f74401be8472f3d0eb644af",
+				"dweb:/ipfs/QmX91pyp3zrcWW4FNe97KsqC75uLEkgS7QNsKncvdaY6cU"
+			]
+		},
+		"XENEVFTorrent/XENEVFT.sol": {
+			"keccak256": "0x1241724819eca6ac664603e9c72fae5e8050d56ea32abec9254f6f41120c822f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1fca8173060037501a0330b9a06618028e91d1819de862fcff7026de25ae1877",
+				"dweb:/ipfs/QmPE4gzVHqxvFR31RY2VfScH9yfStKBgk7f4M7ZvT3mynR"
+			]
+		}
+	},
+	"version": 1
+}

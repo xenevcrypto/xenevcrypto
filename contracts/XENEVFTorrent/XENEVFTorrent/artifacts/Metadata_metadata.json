@@ -1,0 +1,343 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "BASE_LUMINOSITY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "BASE_SATURATION",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "COLORS_FULL_SCALE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "DEFAULT_OPACITY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "GROUP_LUMINOSITY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "GROUP_SATURATION",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_POWER",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "NO_COLOR",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "POWER_GROUP_SIZE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "SPECIAL_LUMINOSITY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "burned",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mintInfo",
+						"type": "uint256"
+					}
+				],
+				"name": "attributes",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "n",
+						"type": "uint256"
+					}
+				],
+				"name": "formattedString",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "burned",
+						"type": "uint256"
+					}
+				],
+				"name": "svgData",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Library contains methods to generate on-chain NFT metadata",
+			"kind": "dev",
+			"methods": {
+				"attributes(uint256,uint256,uint256)": {
+					"details": "private helper to construct attributes portion of NFT metadata"
+				},
+				"svgData(uint256,uint256,uint256,address,uint256)": {
+					"details": "public interface to generate SVG image based on XENFT params"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENEVFTorrent/Metadata.sol": "Metadata"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENEVFTorrent/BokkyPooBahsDateTimeLibrary.sol": {
+			"keccak256": "0x039dd3116adecea7b40ed903eb102baee2cf3823a5fbface04df305234a39289",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91d2a749d26cb6e8a5209bd85e34b53adf68b8bf9b0351135a9dcfb83d0629ae",
+				"dweb:/ipfs/QmUD4TV2vacTGnEPfRHgik9R7f7JU5gwQr5t2u78ZVbXcn"
+			]
+		},
+		"XENEVFTorrent/DateTime.sol": {
+			"keccak256": "0x7bdbdc98d5fc7c7eb8fda7a53b1e22b19feb5407717e60f52863993a2b0b2be8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ae1ecb52b6fbb4efde88b9626b36114a835cd5d065f2e35a24652242f4e4a5c0",
+				"dweb:/ipfs/QmUn9yeQBAdubd5YSYz8DFFnHDmjnGnz4MmeeJ6vKpxc65"
+			]
+		},
+		"XENEVFTorrent/FormattedStrings.sol": {
+			"keccak256": "0x41efe2cdcf91ab99c820c29a57ecf7ccbc07c5f346552da0fe9100aa823f72d0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://32583c9dc876c9d1e254da06b1c2766aa553eace202602b614b9385de1e69181",
+				"dweb:/ipfs/QmcHimUZzPWhkB4VW6pvBMgvpegyYL2UryXgPjqp2s8SzN"
+			]
+		},
+		"XENEVFTorrent/IERC20.sol": {
+			"keccak256": "0x1f32a75186bb2aaa1f9a4c13a4bf5a603b4af5dc2dfd9c8f71483b34f7f556c1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f9460ab52630c472d623084d34ab505eb4abfe9d0fdb44bfe46046e3fdb38c93",
+				"dweb:/ipfs/QmasRT1jYUAsRWDSvt4mfTfZH1jdP8uvUUzvsRWdRDN3uS"
+			]
+		},
+		"XENEVFTorrent/IERC20Metadata.sol": {
+			"keccak256": "0x1ffe2047e11fcdd75b2aca845ef3428d93765011f9bdb0ca7bf5d9f95f62656a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b608f183a24077b867dcf21b1e5956b431291324b6025cbb864eb295e005307",
+				"dweb:/ipfs/QmPsgCmqe4HYkFpvYJGWWbkLoQEdhWDzmhG6Lv54FXua8W"
+			]
+		},
+		"XENEVFTorrent/Metadata.sol": {
+			"keccak256": "0x90f9e4da3e5901fa6fc4a4f7203056aff8a8eccfd5ae6fdd4ca7bac78d3fc13b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce30c09d1d301df113b97537222b96c3995fb4b68bc38f1cf68996fd541c3fa5",
+				"dweb:/ipfs/QmPtajzQ6NDPCzKt6jmWuYc5GLJshU6S73TkYu1GuasZwy"
+			]
+		},
+		"XENEVFTorrent/MintInfo.sol": {
+			"keccak256": "0x7f44dcb53047c2b42ad12fabefcafd9ea180ea757f83c0cd813762a7523957c3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dd58163466e13359b47816262335d3e472c4b27faae6d4b34e720ed332fd3ae8",
+				"dweb:/ipfs/QmUkvoH2iGKDTDhzxJ2Gz5daNQTqUsiZJef4nGb4Sm2aMV"
+			]
+		},
+		"XENEVFTorrent/SVG.sol": {
+			"keccak256": "0x59ef2a214ce68423d04dbe42b79a10e121b17f0294f81057ed382abd23ebaa85",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5446891706924e7474afe835f540939b496e3ab3d839b348d763ba37a8f7fe62",
+				"dweb:/ipfs/QmX4FZQB2QbcJYped2MGsFs841U9C933on2Pej7jTNe2Xf"
+			]
+		},
+		"XENEVFTorrent/StringData.sol": {
+			"keccak256": "0x81c722b8bd1ba4728b10ab3fd70bc3c4688f94f879c55057b658d8c18eaa8816",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://80284639e8a0e685a3b3925d38cf90516d86c3175a902e1465d2693e99feddcc",
+				"dweb:/ipfs/QmXCD5ARxLF95JqjSa1b9wAYRKWwWh9UiyJRTtHxKAwWg5"
+			]
+		},
+		"XENEVFTorrent/Strings.sol": {
+			"keccak256": "0xa27e8f761504e2630fa443384867dc8b933348e25467250129326ccf598e49d6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://95d1d0bd53f2d449601d7c461d278bce0b7d75b421ee5e5ae3910b5cb985381a",
+				"dweb:/ipfs/QmaaZoHwqGy3vFgaVbxpoRagp7Htv2MUknuUEVP1sCLXh6"
+			]
+		}
+	},
+	"version": 1
+}

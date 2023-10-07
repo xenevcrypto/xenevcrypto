@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "forwarder",
+						"type": "address"
+					}
+				],
+				"name": "isTrustedForwarder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/IERC2771.sol": "IERC2771"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/IERC2771.sol": {
+			"keccak256": "0x0172541223c96238dd1afd2a7c6433dc4332381dc522c496fb0584d848f3c149",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b5ade822ad5bdeb536e3a0361ac241229f56780fb4b464f18f728e33c67348e9",
+				"dweb:/ipfs/QmUH7xLEZDJofXtAK1Z2wif3w6EiNCvYJpbaZ2XcYPj54y"
+			]
+		}
+	},
+	"version": 1
+}

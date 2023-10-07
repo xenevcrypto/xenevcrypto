@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "forwarder",
+						"type": "address"
+					}
+				],
+				"name": "isTrustedForwarder",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Context variant with ERC2771 support.",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"custom:oz-upgrades-unsafe-allow": "constructor"
+				}
+			},
+			"stateVariables": {
+				"_trustedForwarder": {
+					"custom:oz-upgrades-unsafe-allow": "state-variable-immutable"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/ERC2771Context.sol": "ERC2771Context"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/Context.sol": {
+			"keccak256": "0x2c36c9489879b7c91cdd73bbe8b2584f401aa26f4f252c04f053e824d6ca75c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3ef20575fc12fd27f252acd28a8d0f65893832f29fd9c82f7ec165121af4572f",
+				"dweb:/ipfs/QmZMCoWWDTjhs1CNFMWv4JNWVyyeuzyqteCHhF4heCUYJJ"
+			]
+		},
+		"XENFT/ERC2771Context.sol": {
+			"keccak256": "0xe5f9d9ade49e70f97cf46851683e6eea9c63450b6a2c968e2d39a1c690ceb032",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7478bf00408a6d0583247674c88350bdb1eaf7b055381d6c7d1de0e73f7468e4",
+				"dweb:/ipfs/Qma7oHnFa8QDTAjXyJiGWVT6kfYcTcF4dB6fmHSRVveaAL"
+			]
+		}
+	},
+	"version": 1
+}

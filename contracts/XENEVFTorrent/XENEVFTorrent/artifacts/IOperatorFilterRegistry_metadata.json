@@ -1,0 +1,536 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "codeHashOf",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "registrantToCopy",
+						"type": "address"
+					}
+				],
+				"name": "copyEntriesOf",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "filteredCodeHashAt",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "filteredCodeHashes",
+				"outputs": [
+					{
+						"internalType": "bytes32[]",
+						"name": "",
+						"type": "bytes32[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "filteredOperatorAt",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "filteredOperators",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "codeHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "isCodeHashFiltered",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "operatorWithCode",
+						"type": "address"
+					}
+				],
+				"name": "isCodeHashOfFiltered",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					}
+				],
+				"name": "isOperatorAllowed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					}
+				],
+				"name": "isOperatorFiltered",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "isRegistered",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					}
+				],
+				"name": "register",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "registrantToCopy",
+						"type": "address"
+					}
+				],
+				"name": "registerAndCopyEntries",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "subscription",
+						"type": "address"
+					}
+				],
+				"name": "registerAndSubscribe",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "registrantToSubscribe",
+						"type": "address"
+					}
+				],
+				"name": "subscribe",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "subscriberAt",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					}
+				],
+				"name": "subscribers",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "subscriptionOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "unregister",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "copyExistingEntries",
+						"type": "bool"
+					}
+				],
+				"name": "unsubscribe",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "codehash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bool",
+						"name": "filtered",
+						"type": "bool"
+					}
+				],
+				"name": "updateCodeHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "codeHashes",
+						"type": "bytes32[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "filtered",
+						"type": "bool"
+					}
+				],
+				"name": "updateCodeHashes",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "filtered",
+						"type": "bool"
+					}
+				],
+				"name": "updateOperator",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "registrant",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "operators",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "filtered",
+						"type": "bool"
+					}
+				],
+				"name": "updateOperators",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/IOperatorFilterRegistry.sol": "IOperatorFilterRegistry"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/IOperatorFilterRegistry.sol": {
+			"keccak256": "0xa5f3ce1c6f32280086d1efd72ac6298b99e58d73bd87bc9ef8ccbf94cc25dcac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://25886ca78e58d8703b821efe0348a7532a47d723794a6a31a5eb01b0d8f4be50",
+				"dweb:/ipfs/QmS4EUkBGNMDnWS7LbAAySaEh54w5ruFSdPJNdTuuBTAU4"
+			]
+		}
+	},
+	"version": 1
+}

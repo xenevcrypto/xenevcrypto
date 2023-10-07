@@ -1,0 +1,81 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					}
+				],
+				"name": "OperatorNotAllowed",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "OPERATOR_FILTER_REGISTRY",
+				"outputs": [
+					{
+						"internalType": "contract IOperatorFilterRegistry",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "This smart contract is meant to be inherited by token contracts so they can use the following:         - `onlyAllowedOperator` modifier for `transferFrom` and `safeTransferFrom` methods.         - `onlyAllowedOperatorApproval` modifier for `approve` and `setApprovalForAll` methods.",
+			"kind": "dev",
+			"methods": {},
+			"title": "OperatorFilterer",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Abstract contract whose constructor automatically registers and optionally subscribes to or copies another         registrant's entries in the OperatorFilterRegistry.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"XENFT/OperatorFilterer.sol": "OperatorFilterer"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"XENFT/IOperatorFilterRegistry.sol": {
+			"keccak256": "0xa5f3ce1c6f32280086d1efd72ac6298b99e58d73bd87bc9ef8ccbf94cc25dcac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://25886ca78e58d8703b821efe0348a7532a47d723794a6a31a5eb01b0d8f4be50",
+				"dweb:/ipfs/QmS4EUkBGNMDnWS7LbAAySaEh54w5ruFSdPJNdTuuBTAU4"
+			]
+		},
+		"XENFT/OperatorFilterer.sol": {
+			"keccak256": "0x7e49d76ac563b1f85a7cf28b2fb6efa0973615174dda70afb551fa9b2e28b9fe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://62315522778a1e992895c05c4898e1817730aaf99b10719f0c003c3a9eec0631",
+				"dweb:/ipfs/QmZnkctSzfcEco49XRekwyRsU7KvTrNU18DVk4t4VuBigz"
+			]
+		}
+	},
+	"version": 1
+}
