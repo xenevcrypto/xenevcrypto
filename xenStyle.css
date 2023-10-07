@@ -1,0 +1,122 @@
+
+
+body {
+  background-color: #1a1a2e; /* un tono de negro azulado */
+}
+
+  div{
+    border: 1px solid #ccc;
+    border-radius: 18px; 
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+  }
+#Lterm{
+  margin: 1% 1% 1% 1%;
+}
+#term{
+  margin: 1% 1% 1% 1%;
+}
+#claimr{margin: 1% 1% 1% 1%;
+    }
+    #claimStaked{margin: 1% 1% 1% 1%;
+    }
+    #conectar{margin: 1% 1% 1% 1%;
+    }
+ 
+.gRank1{
+      margin: 1% 1% 1% 1%;
+    }
+    
+    input[type="button"] {
+      border-radius: 25px; /* para hacer el botón ovalado, utiliza el 50% del valor de la altura */
+      width: auto; /* establece la anchura del botón en píxeles o en porcentaje */
+      font-size: 18px;
+      background-image: linear-gradient(to bottom right, #1a1a2e, #16213e, #1b2a4a, #253558, #2c3e67);
+      color: #ffffff; /* letras blancas */
+      cursor: pointer;
+    }
+    button {
+      border-radius: 25px; /* para hacer el botón ovalado, utiliza el 50% del valor de la altura */
+      width: auto; /* establece la anchura del botón en píxeles o en porcentaje */
+      font-size: 18px;
+      background-image: linear-gradient(to bottom right, #1a1a2e, #16213e, #1b2a4a, #253558, #2c3e67);
+      color: #ffffff; /* letras blancas */
+      cursor: pointer;
+    }
+    input[type="text"] {
+      border-radius: 25px; /* para hacer el botón ovalado, utiliza el 50% del valor de la altura */
+      /* establece la anchura del botón en píxeles o en porcentaje */
+      font-size: 18px;
+      
+    }
+    label {
+      color: #ffffff; /* letras blancas */
+      font-size: 18px;
+    }
+    .footer-text {
+      color: #ffffff;
+      text-align: center;
+    }
+    
+    .social-icons {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .social-icons li {
+      margin-right: 10px;
+    }
+    
+    .social-icons li:last-child {
+      margin-right: 0;
+    }
+    
+    .social-icons a {
+      color: #ffffff;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #1a1a2e;
+      text-decoration: none;
+    }
+    
+    .social-icons a:hover {
+      background-color: #ffffff;
+      color: #1a1a2e;
+    }
+    
+    .social-icons a i {
+      font-size: 16px;
+    }
+    
+    .telegram {
+      content: "\f09a";
+      
+    }
+    
+    .fa-twitter:before {
+      content: "\f099";
+    }
+    
+    .fa-instagram:before {
+      content: "\f16d";
+    }
+    .btnclaim {
+      width: 100px;
+      height: 50px;
+    }
+    .home-link {
+      display: flex; /* Mostrar en línea horizontalmente */
+      margin: 0; /* Eliminar los márgenes superior e inferior */
+    }
