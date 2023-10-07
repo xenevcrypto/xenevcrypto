@@ -219,11 +219,11 @@ async function ObtenerCuenta(){
 
 
    
-     const contracten = new web3.eth.Contract(JSON.parse(abiXen), contratoxen);   
-     const balanceXen = await contracten.methods.balanceOf(address).call();
-     var  balancexen = document.getElementById("balancexen"); 
+     const contractxen = new web3.eth.Contract(JSON.parse(abiXen), contratoxen);   
+     const balanceXen = await contractxen.methods.balanceOf(address).call();
+     var  balancexenaux = document.getElementById("balancexen"); 
      const result = Number(balanceXen) / 10**18;
-     balancexen.textContent=result;
+     balancexenaux.textContent=result;
       
     
   
