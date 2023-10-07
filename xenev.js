@@ -1030,14 +1030,15 @@ const toapprove=BigInt( amount * (10 ** 18));
         }
 
         function ListarNFT()
-        {
+        { 
+          ListadoXENEVNFT();
           const chkclaim= document.getElementById('checkclaim');
           if(chkclaim.checked){
             OnlyCalimable();
           }
-          else{
+          /*else{
             ListadoXENEVNFT();
-          }
+          }*/
         }
         async function OnlyCalimable(){
           TestConection();
