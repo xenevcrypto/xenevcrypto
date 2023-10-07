@@ -216,6 +216,14 @@ async function ObtenerCuenta(){
      var  balancevlxen = document.getElementById("balancevlxen"); 
      const resultado = Number(balancevlXen) / 10**18;
      balancevlxen.textContent=resultado;
+
+
+   
+     const contracten = new web3.eth.Contract(JSON.parse(abiXen), contratoxen);   
+     const balanceXen = await contracten.methods.balanceOf(address).call();
+     var  balancexen = document.getElementById("balancexen"); 
+     const result = Number(balanceXen) / 10**18;
+     balancexen.textContent=result;
       
     
   
