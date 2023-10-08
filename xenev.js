@@ -292,6 +292,13 @@ async function GlobaRank()
     
     const gRank = document.getElementById('gRank');
      gRank.textContent = receipt;
+
+     var receipt1 = await contract.methods.getCurrentAMP().call();
+   
+    
+    
+    const ampp = document.getElementById('ampp');
+    ampp.textContent = receipt1;
      
      
 }
