@@ -294,6 +294,21 @@ async function GlobaRank()
      
      
 }
+async function Amp()
+{ 
+      TestConection();
+
+   
+    const contract = new web3.eth.Contract(JSON.parse(abiXenev), contrato);   
+    const receipt = await contract.methods.getCurrentAMP().call();
+    
+    globalrank=receipt;
+    
+    const gRank = document.getElementById('amp');
+     gRank.textContent = receipt;
+     
+     
+}
 async function LiquidSupply()
 { 
       TestConection();
