@@ -134,7 +134,6 @@ async function ConectarMetamask()
       NftCatClass();      
       ActualizarDasboard();      
       GlobaRank();
-      Amp();
       ListarNFT();
       
 
@@ -302,21 +301,7 @@ async function GlobaRank()
      
      
 }
-async function Amp()
-{ 
-      TestConection();
 
-   
-    const contract = new web3.eth.Contract(JSON.parse(abiXenev), contrato);   
-    const receipt = await contract.methods.getCurrentAMP().call();
-    
-    
-    
-    const gRank = document.getElementById('amp');
-     gRank.textContent = receipt;
-     
-     
-}
 async function LiquidSupply()
 { 
       TestConection();
