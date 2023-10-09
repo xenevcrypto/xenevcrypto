@@ -939,23 +939,31 @@ calculateTotalPages();
           
           
             
-            
+          
             address = (await web3.eth.getAccounts())[0];
-             const contractxen = new web3.eth.Contract(JSON.parse(abiXen), contratoxen);   
-             const allowancedaux=await contractxen.methods.allowance(address,contrato).call({from : address});
+             const contractxen = new web3.eth.Contract(JSON.parse(abiXen), contratoxen);               
+             const allowancedaux=await contractxen.methods.allowance(address,contrato).call({from : address});             
              const XENbalanceaux=await contractxen.methods.balanceOf(address).call({from : address});
+             
              const allowanced=allowancedaux/(10**18);
              const XENEVlabalance=XENbalanceaux/(10**18);
              //alert(allowanced);
-             //alert(XENEVlabalance);
              
-             if(XENbalanceaux === 0){
+             const Numeric = parseInt(burnXENEVt.value);
+            
+             if(burnXENEVt.value === ""){
+              alert ("Add XEN amount");
+             }
+             else if ( Numeric === 0 || isNaN(Numeric)) {
+              alert("Add a valid non-zero XEN amount");
+            } 
+             else if(XENbalanceaux === 0){
               alert ("Need XEN");
              }
-             else if(XENEVlabalance<burnXENEVt.value){
+             else if(XENEVlabalance<Numeric){
               alert ("Need XEN");
              }
-             else if(XENbalanceaux>=burnXENEVt.value){
+             else if(XENbalanceaux>=Numeric){
 
               if (allowanced === 0) {
                 alert ("Approve XEN");
@@ -970,7 +978,7 @@ calculateTotalPages();
                 ApproveXen(amount);
                  
                 
-              } else if (allowanced >= burnXENEVt.value) {
+              } else if (allowanced >= Numeric && XENEVlabalance>=Numeric) {
                 
                  
                 const amount=burnXENEVt.value;
