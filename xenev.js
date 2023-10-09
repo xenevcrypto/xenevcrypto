@@ -11,8 +11,8 @@ var nftabi='[ { "inputs": [ { "internalType": "address", "name": "trustedForward
 const abiMintInfo='[ { "inputs": [ { "internalType": "uint256", "name": "info", "type": "uint256" } ], "name": "decodeMintInfo", "outputs": [ { "internalType": "uint256", "name": "term", "type": "uint256" }, { "internalType": "uint256", "name": "maturityTs", "type": "uint256" }, { "internalType": "uint256", "name": "rank", "type": "uint256" }, { "internalType": "uint256", "name": "amp", "type": "uint256" }, { "internalType": "uint256", "name": "eaa", "type": "uint256" }, { "internalType": "uint256", "name": "class", "type": "uint256" }, { "internalType": "bool", "name": "apex", "type": "bool" }, { "internalType": "bool", "name": "limited", "type": "bool" }, { "internalType": "bool", "name": "redeemed", "type": "bool" } ], "stateMutability": "pure", "type": "function" }, { "inputs": [ { "internalType": "uint256", "name": "term", "type": "uint256" }, { "internalType": "uint256", "name": "maturityTs", "type": "uint256" }, { "internalType": "uint256", "name": "rank", "type": "uint256" }, { "internalType": "uint256", "name": "amp", "type": "uint256" }, { "internalType": "uint256", "name": "eaa", "type": "uint256" }, { "internalType": "uint256", "name": "class_", "type": "uint256" }, { "internalType": "bool", "name": "redeemed", "type": "bool" } ], "name": "encodeMintInfo", "outputs": [ { "internalType": "uint256", "name": "info", "type": "uint256" } ], "stateMutability": "pure", "type": "function" }, { "inputs": [ { "internalType": "uint256", "name": "info", "type": "uint256" } ], "name": "getAMP", "outputs": [ { "internalType": "uint256", "name": "amp", "type": "uint256" } ], "stateMutability": "pure", "type": "function" }, { "inputs": [ { "internalType": "uint256", "name": "info", "type": "uint256" } ], "name": "getClass", "outputs": [ { "internalType": "uint256", "name": "class_", "type": "uint256" }, { "internalType": "bool", "name": "apex", "type": "bool" }, { "internalType": "bool", "name": "limited", "type": "bool" } ], "stateMutability": "pure", "type": "function" }, { "inputs": [ { "internalType": "uint256", "name": "info", "type": "uint256" } ], "name": "getEAA", "outputs": [ { "internalType": "uint256", "name": "eaa", "type": "uint256" } ], "stateMutability": "pure", "type": "function" }, { "inputs": [ { "internalType": "uint256", "name": "info", "type": "uint256" } ], "name": "getMaturityTs", "outputs": [ { "internalType": "uint256", "name": "maturityTs", "type": "uint256" } ], "stateMutability": "pure", "type": "function" }, { "inputs": [ { "internalType": "uint256", "name": "info", "type": "uint256" } ], "name": "getRank", "outputs": [ { "internalType": "uint256", "name": "rank", "type": "uint256" } ], "stateMutability": "pure", "type": "function" }, { "inputs": [ { "internalType": "uint256", "name": "info", "type": "uint256" } ], "name": "getRedeemed", "outputs": [ { "internalType": "bool", "name": "redeemed", "type": "bool" } ], "stateMutability": "pure", "type": "function" }, { "inputs": [ { "internalType": "uint256", "name": "info", "type": "uint256" } ], "name": "getTerm", "outputs": [ { "internalType": "uint256", "name": "term", "type": "uint256" } ], "stateMutability": "pure", "type": "function" } ]'
 //const contrato='0x0D6A3F69048D8b49463E8f4Ad3cA4B278E55de67'0xb564a5767a00ee9075cac561c427643286f8f4e1   0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e  0xC0C5AA69Dbe4d6DDdfBc89c0957686ec60F24389;
 let contratoxen='0x784005e14a12545f22f53e6325bd2a2172237414';
-let nftcontrato='0xB3EA923D0c4eEbaf7BE5E42a8dbDaB52C8166297';
-let contrato='0x6f54cEb7109ABEc8C92451e0464a9E0deDeA3B21';
+let nftcontrato='0xBB0EFB2165Cf5c131428edD5ebda5cb0DfF701B0';
+let contrato='0x15f2Aa402b6C16f7Dc2D621DB21dAf5Ed0E14668';
 let MintInfocontract='0x4330067fA9bCC63ebB80df0b1f854EbFBB6d50a2';
 
 var uterm="";
@@ -90,8 +90,8 @@ async function ConectarMetamask()
     //alert(netw.value);
       netid ='4003';
       contratoxen = '0x784005e14a12545f22f53e6325bd2a2172237414';
-      nftcontrato='0xB3EA923D0c4eEbaf7BE5E42a8dbDaB52C8166297';
-      contrato='0x6f54cEb7109ABEc8C92451e0464a9E0deDeA3B21';
+      nftcontrato='0xBB0EFB2165Cf5c131428edD5ebda5cb0DfF701B0';
+      contrato='0x15f2Aa402b6C16f7Dc2D621DB21dAf5Ed0E14668';
       MintInfocontract='0x4330067fA9bCC63ebB80df0b1f854EbFBB6d50a2';
       symb.textContent='XN';
   }
@@ -492,8 +492,8 @@ function calculateTimeLeft(maturityTimeInSeconds) {
             //alert(netw.value);
             netw.value='fastnet';
             contratoxen = '0x784005e14a12545f22f53e6325bd2a2172237414';
-            nftcontrato='0xB3EA923D0c4eEbaf7BE5E42a8dbDaB52C8166297';
-            contrato='0x6f54cEb7109ABEc8C92451e0464a9E0deDeA3B21';
+            nftcontrato='0xBB0EFB2165Cf5c131428edD5ebda5cb0DfF701B0';
+            contrato='0x15f2Aa402b6C16f7Dc2D621DB21dAf5Ed0E14668';
             MintInfocontract='0x4330067fA9bCC63ebB80df0b1f854EbFBB6d50a2';
               symb.textContent='XN';
               ConectarMetamask();
