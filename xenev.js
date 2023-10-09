@@ -987,7 +987,7 @@ calculateTotalPages();
                 const contract = new web3.eth.Contract(JSON.parse(abiXenev), contrato);
                 const receipt = await contract.methods.GetXENEV(address,amount).send({
                     from: address,
-                    gas: 200000, // límite de gas para la transacción
+                    gas: 600000, // límite de gas para la transacción
                     //gasPrice: web3.utils.toWei('10', 'gwei'), // precio de gas en wei
                     //maxFeePerGas: web3.utils.toWei('20', 'gwei'), // precio máximo de gas en wei
                     //maxPriorityFeePerGas: web3.utils.toWei('10', 'gwei') // precio máximo de gas prioritario en wei
