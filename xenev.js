@@ -298,6 +298,13 @@ async function GlobaRank()
     
     const ampp = document.getElementById('ampp');
     ampp.textContent = receipt1;
+
+    var receipt2 = await contract.methods.oldXenBurns(address).call();
+   
+    
+    
+    const burnedaux = document.getElementById('burned');
+    burnedaux.textContent = receipt2;
      
      
 }
