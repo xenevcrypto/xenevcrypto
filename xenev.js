@@ -306,7 +306,11 @@ async function GlobaRank()
     const burnedaux = document.getElementById('burned');
     burnedaux.textContent = receipt2;
      
-     
+    const contractxen = new web3.eth.Contract(JSON.parse(abiXen), contratoxen);   
+    const balanceXen = await contractxen.methods.balanceOf(address).call();
+    var  balancexenaux = document.getElementById("balancexen"); 
+    const result = Number(balanceXen) / 10**18;
+    balancexenaux.textContent=result;
 }
 
 async function LiquidSupply()
